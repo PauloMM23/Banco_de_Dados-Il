@@ -263,3 +263,14 @@ from funcionario
 inner join trabalha_em on funcionario.cpf = trabalha_em.fcpf
 inner join projeto on trabalha_em.pnr = projeto.projnumero
 where projeto.projnome = "ProdutoX";
+
+select projnumero, dnum, unome, endereco, datanasc
+from projeto 
+inner join departamento on dnum = Dnumero
+inner join funcionario on cpf_gerente = cpf
+where projlocal = 'Mauá';
+
+#LEFT JOIN
+select *
+from funcionario as f
+inner join funcionario as g on f.cpf_supervisor = g.cpf;
